@@ -1,4 +1,4 @@
-import { genChartByAiUsingPOST } from '@/services/yubi/chartController';
+import { genChartByAiUsingPOST } from '@/services/wisdom/chartController';
 import { UploadOutlined } from '@ant-design/icons';
 import {Button, Card, Col, Divider, Form, Input, message, Row, Select, Space, Spin, Upload} from 'antd';
 import TextArea from 'antd/es/input/TextArea';
@@ -67,6 +67,15 @@ const AddChart: React.FC = () => {
               </Form.Item>
               <Form.Item name="name" label="图表名称">
                 <Input placeholder="请输入图表名称" />
+              </Form.Item>
+              <Form.Item name="modelType" label="模型选择">
+                <Select
+                  options={[
+                    { value: 'OPENAI', label: 'OPENAI' },
+                    {value:'讯飞星火',label:'讯飞星火'},
+                    {value:'通义千问',label:'通义千问'},
+                  ]}
+                />
               </Form.Item>
               <Form.Item name="chartType" label="图表类型">
                 <Select

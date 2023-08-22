@@ -1,4 +1,4 @@
-import { listMyChartByPageUsingPOST } from '@/services/yubi/chartController';
+import { listMyChartByPageUsingPOST } from '@/services/wisdom/chartController';
 
 import { useModel } from '@@/exports';
 import {Avatar, Card, List, message, Result} from 'antd';
@@ -13,7 +13,7 @@ import Search from "antd/es/input/Search";
 const MyChartPage: React.FC = () => {
   const initSearchParams = {
     current: 1,
-    pageSize: 4,
+    pageSize: 10,
     sortField: 'createTime',
     sortOrder: 'desc',
   };
